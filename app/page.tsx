@@ -53,25 +53,10 @@ export default function Page() {
             </RadioGroup.Root>
 
             <div className="mt-5 text-right">
-              <button className="focus:outline-none focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-blue-500 bg-blue-500 text-white text-sm px-3 py-1 font-medium rounded">
+              <button className="focus:outline-none focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-blue-500 bg-blue-500 hover:bg-blue-400 text-white text-sm px-4 py-2 font-semibold rounded">
                 Buy
               </button>
             </div>
-          </form>
-
-          <form
-            action={(formData) => {
-              console.log(Object.fromEntries(formData));
-            }}
-          >
-            {options.map((option) => (
-              <label className="block" key={option.value}>
-                <input type="radio" name="storage" value={option.value} />
-                {option.label}
-              </label>
-            ))}
-
-            <button>save</button>
           </form>
         </div>
       </div>
