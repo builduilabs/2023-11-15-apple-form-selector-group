@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import FocusVisible from "./focus-visible";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +16,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <FocusVisible />
       <body className={inter.className}>{children}</body>
     </html>
   );
