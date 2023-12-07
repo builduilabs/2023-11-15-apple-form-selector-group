@@ -17,10 +17,9 @@ export default function Page() {
   return (
     <div className="max-w-sm w-full">
       <div className="p-4">
-        <p className="font-medium">Storage</p>
+        <p className="font-medium hidden mb-4 md:block">Storage</p>
 
         <form
-          className="mt-4"
           action={(formData) => {
             alert(JSON.stringify(Object.fromEntries(formData)));
           }}
@@ -34,7 +33,7 @@ export default function Page() {
           >
             {options.map((option) => (
               <RadioGroup.Item
-                className="flex w-full border rounded-lg border-gray-500 p-4 data-[state=checked]:border-blue-500 data-[state=checked]:ring-1 data-[state=checked]:ring-inset data-[state=checked]:ring-blue-500 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-blue-500"
+                className="flex w-full border rounded-lg border-gray-500 p-4 data-[state=checked]:border-blue-500 data-[state=checked]:ring-1 data-[state=checked]:ring-inset data-[state=checked]:ring-blue-500 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-blue-500 text-sm md:text-base"
                 key={option.value}
                 value={option.value}
               >
@@ -51,7 +50,7 @@ export default function Page() {
           </RadioGroup.Root>
 
           <div className="mt-8 text-right">
-            <button className="focus:outline-none focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-blue-500 bg-blue-500 hover:bg-blue-400 text-white text-sm px-3 py-1 font-semibold rounded">
+            <button className="focus:outline-none focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-blue-500 bg-blue-500 hover:bg-blue-400 text-white text-sm w-full md:w-auto py-3 px-3 md:py-2 md:px-4 font-semibold rounded">
               Buy
             </button>
           </div>
